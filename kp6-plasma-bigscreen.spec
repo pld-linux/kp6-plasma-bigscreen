@@ -70,6 +70,7 @@ sposób.
 	%{!?with_tests:-DBUILD_TESTING=OFF} \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
 	-DHTML_INSTALL_DIR=%{_kdedocdir}
+
 %ninja_build -C build
 
 %if %{with tests}
@@ -78,8 +79,13 @@ ctest
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %ninja_install -C build
 #sed -i -e 's|bin/env python3|bin/python3|' $RPM_BUILD_ROOT%{_bindir}/mycroft-skill-launcher.py
+
+# cmakefiles install it to KDE libdir
+install -d $RPM_BUILD_ROOT/lib
+%{__mv} $RPM_BUILD_ROOT%{_libdir}/udev $RPM_BUILD_ROOT/lib
 
 %find_lang %{kpname} --all-name --with-kde
 
@@ -108,7 +114,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/qt6/plugins/plasma/kcms/systemsettings/kcm_mediacenter_webapps.so
 %{_libdir}/qt6/plugins/plasma/kcms/systemsettings/kcm_mediacenter_wifi.so
 %{_libdir}/qt6/qml/org/kde/bigscreen
-%{_libdir}/udev/rules.d/40-uinput.rules
+/lib/udev/rules.d/40-uinput.rules
 %{_desktopdir}/kcm_mediacenter_audiodevice.desktop
 %{_desktopdir}/kcm_mediacenter_bigscreen_settings.desktop
 %{_desktopdir}/kcm_mediacenter_bluetooth.desktop
