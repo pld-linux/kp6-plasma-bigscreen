@@ -22,10 +22,11 @@ BuildRequires:	Qt6Multimedia-devel >= %{qtver}
 BuildRequires:	Qt6Network-devel >= %{qtver}
 BuildRequires:	Qt6Qml-devel >= %{qtver}
 BuildRequires:	Qt6Quick-devel >= %{qtver}
-BuildRequires:	cmake >= 3.16.0
+BuildRequires:	SDL3-devel >= 3.0
+BuildRequires:	cmake >= 3.24
 BuildRequires:	fontconfig-devel
 BuildRequires:	freetype-devel
-BuildRequires:	gettext
+BuildRequires:	gettext-tools
 BuildRequires:	kf6-extra-cmake-modules >= %{kfver}
 BuildRequires:	kf6-kauth-devel >= %{kfver}
 BuildRequires:	kf6-kcmutils-devel >= %{kfver}
@@ -45,8 +46,11 @@ BuildRequires:	kp6-kwayland-devel >= %{kdeplasmaver}
 BuildRequires:	kp6-plasma-activities-devel >= %{kdeplasmaver}
 BuildRequires:	kp6-plasma-activities-stats-devel >= %{kdeplasmaver}
 BuildRequires:	kp6-plasma-workspace-devel >= %{kdeplasmaver}
+BuildRequires:	libcec-devel >= 6
+BuildRequires:	libstdc++-devel >= 6:8
 BuildRequires:	ninja
 BuildRequires:	pkgconfig
+BuildRequires:	qcoro-qt6-devel >= 0.7.0
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	xz
 Obsoletes:	kp5-plasma-phone-components < 5.24.1
