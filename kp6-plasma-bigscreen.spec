@@ -54,6 +54,7 @@ BuildRequires:	qcoro-qt6-devel >= 0.7.0
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	xz
 Obsoletes:	kp5-plasma-phone-components < 5.24.1
+ExcludeArch:	i386 x32
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		qt6dir		%{_libdir}/qt6
