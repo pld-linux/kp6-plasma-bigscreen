@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.7.5
+%define		kdeplasmaver	6.8.0
 %define		qtver		6.11.0
 %define		kpname		plasma-bigscreen
 %define		kfver		6.26.0
 
 Summary:	plasma-bigscreen
 Name:		kp6-%{kpname}
-Version:	6.7.5
+Version:	6.8.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	0f53fed070cbdc81d4dc9cead14430af
+# Source0-md5:	3ab988ec5e73feeacf6d6e42a8d09150
 URL:		https://plasma-bigscreen.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel >= %{qtver}
@@ -141,3 +141,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/plasma/shells/org.kde.plasma.bigscreen
 %{_datadir}/sounds/plasma-bigscreen
 %{_datadir}/wayland-sessions/plasma-bigscreen-wayland.desktop
+%{_desktopdir}/org.kde.plasma.bigscreen.settings.desktop
