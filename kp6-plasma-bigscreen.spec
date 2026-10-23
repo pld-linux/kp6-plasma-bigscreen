@@ -27,6 +27,7 @@ BuildRequires:	cmake >= 3.24
 BuildRequires:	fontconfig-devel
 BuildRequires:	freetype-devel
 BuildRequires:	gettext-tools
+BuildRequires:	ka6-kdeconnect-kde
 BuildRequires:	kf6-bluez-qt-devel >= %{kfver}
 BuildRequires:	kf6-extra-cmake-modules >= %{kfver}
 BuildRequires:	kf6-kauth-devel >= %{kfver}
