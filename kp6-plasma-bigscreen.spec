@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.8.2
+%define		kdeplasmaver	6.8.3
 %define		qtver		6.11.0
 %define		kpname		plasma-bigscreen
 %define		kfver		6.26.0
 
 Summary:	plasma-bigscreen
 Name:		kp6-%{kpname}
-Version:	6.8.2
+Version:	6.8.3
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	6217a5fc0d1727b4d292e18fcc25ee38
+# Source0-md5:	59c6208b0df1623be6072e801709f529
 URL:		https://plasma-bigscreen.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel >= %{qtver}
